@@ -13,7 +13,7 @@ function Cardsection({characters}) {
             </header>
             
 
-            <div>
+            <CardContainer>
                 {
                     characters.map((character) => {
                         return (
@@ -35,7 +35,7 @@ function Cardsection({characters}) {
                         )
                     })
                 }
-            </div>
+            </CardContainer>
 
         </MainSection>
     )
@@ -59,4 +59,13 @@ const MainSection = styled.section`
             padding-bottom: 10px;
         }
     }
+` 
+const CardContainer = styled.article`
+    max-width: 1550px;
+    margin: 0 auto;
+    border-color: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 ` 
