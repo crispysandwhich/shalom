@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from './NavBar'
-import Footer from './Footer'
+import Footer from './footer'
 
 function Layout(props) {
     return (
