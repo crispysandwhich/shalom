@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import styled from 'styled-components';
 
 
-import CardSection from '../components/CardSection';
+import Cardsection from '../components/Cardsection';
 
 
 function App() {
