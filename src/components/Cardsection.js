@@ -97,12 +97,8 @@ const CustomCard = styled.div`
         }
     }
 `
-const Dead = styled.p`
-    color:red;
-` 
-const Alive = styled.p`
-    color:green;
-` 
+
+
 const Life = styled.span`
     color: ${pr => pr.dead ? pr.theme.alertColor : pr.theme.safeColor};
     font-weight: bold;
