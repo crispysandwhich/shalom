@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Navbar from './navBar'
 function about() {
     return (
         <div>
