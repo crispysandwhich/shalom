@@ -17,21 +17,23 @@ function CardSection({characters}) {
                 {
                     characters.map((character) => {
                         return (
-                            <div className='characterCard'>
+                            <CharacterCard>
                                 <img src={character.image} alt={character.name} />
-                                <div>
-                                    <h3>{character.name}</h3>
-                                    <p>{character.status} - {character.species}</p>
+                                <div className="characterCard-content">
+                                    <div>
+                                        <h3>{character.name}</h3>
+                                        <p><Life live={character.status}>{character.status}</Life> - {character.species}</p>
+                                    </div>
                                     <p>
                                         Last Known Location:
-                                        <span>{character.location['name']}</span>
+                                        <span className="subtitle">{character.location['name']}</span>
                                     </p>
                                     <p>
                                         First Seen:
-                                        <span>{character.origin['name']}</span>
+                                        <span className="subtitle">{character.origin['name']}</span>
                                     </p>
                                 </div>
-                            </div>
+                            </CharacterCard>
                         )
                     })
                 }
@@ -69,3 +71,33 @@ const CardContainer = styled.article`
     justify-content: space-around;
     align-items: center;
 `;
+const CharacterCard = styled.div`
+    width: 450px;
+    background-color: #1b233f;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 5%;
+
+    img{
+        border-top-left-radius: 5%;
+        border-bottom-left-radius: 5%;
+        width: 250px;
+    }
+
+    div.characterCard-content{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        span.subtitle{
+            display: block;
+            font-size: 12px;
+        }
+
+    }
+
+` 
+const Life = styled.span`
+    color: ${p => p.live === 'Dead' ? p.theme.alertColor : p.theme.okayColor}
+` 

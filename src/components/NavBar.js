@@ -28,7 +28,6 @@ const HeaderContainer = styled.div`
     color: yellow;
     display:flex;
     justify-content: center;
-    
  
 ` ;
 
@@ -44,5 +43,6 @@ const SubNavUL = styled.ul`
     top: 110%;
     left: -68%;
     font-size: 2rem;
-
+    ${'' /* Lyub was here */}
+    z-index: 1;
 `;
