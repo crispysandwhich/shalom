@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
-import Layout from '../components/layout'
+import {Link} from 'react-router-dom';
+import Layout from '../components/layout';
 
 
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 
-import Cardsection from '../components/Cardsection'
+import CardSection from '../components/CardSection';
 
 
 
@@ -54,7 +54,7 @@ function App() {
       </MainSection>
 
     {/* This is the card section */}
-      <Cardsection characters={character} />
+      <CardSection characters={character} />
     </Layout>
   );
 }
@@ -114,4 +114,4 @@ const TargetButton = styled.div`
   }
 
 
-` 
+`;
