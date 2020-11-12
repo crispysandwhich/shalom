@@ -10,11 +10,6 @@ import styled from 'styled-components'
 import Cardsection from '../components/Cardsection'
 
 
-
-
-
-
-
 function App() {
 
   const [character, setCharacter] = useState([])
@@ -55,6 +50,7 @@ function App() {
 
     {/* This is the card section */}
       <Cardsection characters={character} />
+
     </Layout>
   );
 }
