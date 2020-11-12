@@ -98,7 +98,6 @@ const CustomCard = styled.div`
     }
 `
 
-
 const Life = styled.span`
     color: ${pr => pr.dead ? pr.theme.alertColor : pr.theme.safeColor};
     font-weight: bold;
