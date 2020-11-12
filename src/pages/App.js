@@ -7,7 +7,12 @@ import Layout from '../components/layout';
 import styled from 'styled-components';
 
 
-import Cardsection from '../components/Cardsection';
+import CardSection from '../components/CardSection';
+
+
+
+
+
 
 
 function App() {
@@ -49,8 +54,7 @@ function App() {
       </MainSection>
 
     {/* This is the card section */}
-      <Cardsection characters={character} />
-
+      <CardSection characters={character} />
     </Layout>
   );
 }
