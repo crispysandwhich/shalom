@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-function Cardsection({characters}) {
+function CardSection({characters}) {
     console.log(characters)
     return (
         <MainSection>
@@ -44,7 +44,7 @@ function Cardsection({characters}) {
     )
 }
 
-export default Cardsection
+export default CardSection;
 
 
 const MainSection = styled.section`
