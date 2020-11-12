@@ -17,21 +17,24 @@ function CardSection({characters}) {
                 {
                     characters.map((character) => {
                         return (
-                            <div className='characterCard'>
+                            <CustomCard>
                                 <img src={character.image} alt={character.name} />
-                                <div>
-                                    <h3>{character.name}</h3>
-                                    <p>{character.status} - {character.species}</p>
+                                <div className='card-content'>
+                                    <div>
+                                        <h3>{character.name}</h3>
+                                        <p><Life dead={character.status === 'Dead'}>{character.status}</Life> - {character.species}</p>
+                                    </div>
+                                    
                                     <p>
                                         Last Known Location:
-                                        <span>{character.location['name']}</span>
+                                        <span className="subText">{character.location['name']}</span>
                                     </p>
                                     <p>
                                         First Seen:
-                                        <span>{character.origin['name']}</span>
+                                        <span className="subText">{character.origin['name']}</span>
                                     </p>
                                 </div>
-                            </div>
+                            </CustomCard>
                         )
                     })
                 }
@@ -68,4 +71,35 @@ const CardContainer = styled.article`
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-`;
+` 
+
+const CustomCard = styled.div`
+    width: 500px;
+    display: flex;
+    background-color: #2f0d1f;
+    margin-bottom: 20px;
+    border-radius: 10%;
+
+    img{
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+        width: 250px;
+    }
+
+    div.card-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+
+        span.subText{
+            display: block;
+        }
+    }
+`
+
+const Life = styled.span`
+    color: ${pr => pr.dead ? pr.theme.alertColor : pr.theme.safeColor};
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255 , .1)
+` 
