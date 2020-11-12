@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import {Link} from 'react-router-dom'
-import Navbar from './navBar'
+import Layout from '../components/layout'
+
 
 import styled from 'styled-components'
 
 
-import Cardsection from './Cardsection'
+import Cardsection from '../components/Cardsection'
 
 
 
@@ -37,11 +38,8 @@ function App() {
 
 
   return (
-    <div className="App">
-    {/* This is the navBar */}
-      <Navbar />
-
-    {/* This is the main hero section */}
+    <Layout>
+      {/* This is the main hero section */}
       <MainSection>
         <MainSectionContent>
           <h2>Welcome to shalom</h2>
@@ -57,8 +55,7 @@ function App() {
 
     {/* This is the card section */}
       <Cardsection characters={character} />
-
-    </div>
+    </Layout>
   );
 }
 
