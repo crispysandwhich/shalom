@@ -1,6 +1,6 @@
 import React from 'react'
 
-function navBar() {
+function NavBar() {
     return (
         <header>
             <h1>shalom</h1>
@@ -16,4 +16,4 @@ function navBar() {
     )
 }
 
-export default navBar
+export default NavBar

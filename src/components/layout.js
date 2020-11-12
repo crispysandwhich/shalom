@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './header'
 import Footer from './footer'
 
-function layout(props) {
+function Layout(props) {
     return (
         <div>
             <Header />
@@ -13,4 +13,4 @@ function layout(props) {
     )
 }
 
-export default layout
+export default Layout
