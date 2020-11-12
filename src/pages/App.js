@@ -10,11 +10,6 @@ import styled from 'styled-components';
 import CardSection from '../components/Cardsection';
 
 
-
-
-
-
-
 function App() {
 
   const [character, setCharacter] = useState([])
@@ -65,15 +60,27 @@ export default App;
 // These are styles for the main section
 const MainSection = styled.section`
   width: 100%;
-  background-color: black;
+  background: url('https://images.unsplash.com/photo-1534684105949-56869170677f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80') no-repeat center center/cover ;
   color: #fff;
   height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5)
+  }
 `
 const MainSectionContent = styled.div`
   
+  z-index: 1;
   text-align: center;
   padding: 10px;
 
