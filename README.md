@@ -28,3 +28,5 @@ And yeah i think that is it
 #### lyub
 #### Remy
 #### ian
+###### dont forget to -git checkout -b 'name'
+to branch and stuff then commit and push then add into this
